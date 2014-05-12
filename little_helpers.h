@@ -58,6 +58,7 @@ private:
 };
 
 
+float mean_average(const float* values, word n);
 
 
 float calc_input_voltage(int input);

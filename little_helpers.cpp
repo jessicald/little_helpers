@@ -146,7 +146,7 @@ void LMP8358_p_t::adjust_gain(gain_t gain)
 
 gain_t LMP8358_p_t::auto_gain()
 {
-    const word SATURATION = 1015;
+    const word SATURATION = 1015;  // About 4.96 V
     word input;
     char i = 6;
     gain_t gain = x1000;
@@ -174,4 +174,14 @@ gain_t LMP8358_p_t::auto_gain()
 gain_t LMP8358_p_t::get_gain() const
 {
     return _gain;
+}
+
+float mean_average(const float* values, word n)
+{
+    float sum = 0;
+    for (unsigned long i = 0; i < n; i++)
+    {
+        sum += values[i];
+    }
+    return sum / n;
 }
