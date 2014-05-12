@@ -185,3 +185,10 @@ float mean_average(const float* values, word n)
     }
     return sum / n;
 }
+
+
+void LCC120_switch(byte pin, boolean state, unsigned long time)
+{
+    digitalWrite(pin, state);
+    delay(time);
+}

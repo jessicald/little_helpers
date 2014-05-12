@@ -81,5 +81,6 @@ void pulse_pin(byte pin, word milliseconds, boolean active_low);
 
 byte hamming_weight(unsigned long i);
 
+void LCC120_switch(byte pin, boolean state, unsigned long time);
 
 #endif
