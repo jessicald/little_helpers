@@ -83,4 +83,6 @@ byte hamming_weight(unsigned long i);
 
 void LCC120_switch(byte pin, boolean state, unsigned long time);
 
+float smooth_analog_reading(byte pin, word samples, unsigned long time);
+
 #endif

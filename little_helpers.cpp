@@ -192,3 +192,15 @@ void LCC120_switch(byte pin, boolean state, unsigned long time)
     digitalWrite(pin, state);
     delay(time);
 }
+
+float smooth_analog_reading(byte pin, word samples, unsigned long time)
+{
+    unsigned long input = 0;
+    for (byte i = 0; i < samples; i++)
+    {
+        input += analogRead(pin);
+        delay(time);
+    }
+    return float(input) / samples;
+}
+
